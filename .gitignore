@@ -1,0 +1,5 @@
+# sensitive
+.env
+.prod.env
+node_modules
+notes-api-web-server.pem
