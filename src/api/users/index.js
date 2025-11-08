@@ -1,4 +1,4 @@
-const routes = require("../notes/routes");
+const routes = require("./routes");
 const UsersHandler = require("./handler");
 
 module.exports = {
