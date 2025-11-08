@@ -6,8 +6,8 @@ const NotesValidator = {
         const validationResult = NotePayloadSchema.validate(payload);
         if (validationResult.error) {
             throw new InvariantError(validationResult.error.message);
-        }
-    },
+    }
+  },
 };
 
 module.exports = NotesValidator;

@@ -44,7 +44,7 @@ class NotesService {
             throw new NotFoundError('Catatan tidak ditemukan');
         }
 
-        return result.rows.map(mapDBToModel);
+        return mapDBToModel(result.rows[0]);
     }
 
     async editNoteById(id, { title, body, tags }) {
@@ -59,7 +59,7 @@ class NotesService {
     if(!result.rows.length){
         throw new NotFoundError('Gagal memperbarui catatan. Id tidak ditemukan');
     }
-  }
+    }
 
     async deleteNoteById(id){
         const query = {

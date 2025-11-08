@@ -40,9 +40,6 @@ class NotesHandler {
   async getNoteByIdHandler(request, h) {
     const { id } = request.params;
     const note = await this._service.getNoteById(id);
-    if (!note) {
-        throw new ClientError('Catatan tidak ditemukan', 404);
-    }
     return {
         status: 'success',
         data: {
